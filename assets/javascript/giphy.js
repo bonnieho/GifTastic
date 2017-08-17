@@ -1,43 +1,5 @@
-/* var buttonsHTML = '';
-var countryArray = ['Japan', 'China', 'Mongolia', 'North Korea', 'Vietnam', 'Thailand', 'Australia', 'India', 'Pakistan', 'Iran', 'Russia', 'Iraq', 'Saudi Arabia', 'Turkey', 'Greece', 'Italy', 'Spain', 'Egypt', 'Germany', 'France', 'England', 'Ireland'];
-var newCountryValue;
-var giphyKey = "dc6zaTOxFJmzC";
-var searchCountry;
-var giphyHolder;
-var giphyArray = [];
-
-function generateButtons() {
-     for (var i = 0; i < countryArray.length; i++) {
-          buttonsHTML += "<button class='btn btn-lrg btn-primary country-buttons' data-country=" + countryArray[i] + ">" + countryArray[i] + "</button>";
-     }
-     $('#country-buttons-container').html(buttonsHTML);
-}
 
 
-*/
-
-    
-
-
-        // Fool around with the GIPHY API. Giphy API.
-
-        // Be sure to read about these GIPHY parameters (hint, hint):
-        
-           // api_key: string
-
-            // q: string (Search query term or prhase)
-
-            // limit: integer (int32) (The maximum number of records to return)
-
-            // rating: string (Filters results by specified rating)
-
-
-// GIPHY requires developers to use a key to access their API data. For now, you can use their public API key.
-// Make sure you switch the protocol in the query URL from http to https, or the app may not work properly when deployed to Heroku.
-        
-
-        // var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=" + "&api_key=729fe4fba3f349c48227746df00511f7&limit=10");
-        // xhr.done(function(data) { console.log("success got data", data); });
 
 
 var searchShows
@@ -85,6 +47,10 @@ function renderButtons() {
 }
 
 
+// start out with a empty text field
+$('#tv-show-input').val("");
+
+
 
 // This function handles the event when 1) the "Add a TV Show" button is clicked; and 2) the user hits enter after a show name is typed into the text field.
 $("#add-show").on("click", function(event) {
@@ -99,20 +65,23 @@ $("#add-show").on("click", function(event) {
 
     // The tv show from the textbox is then added to our array
     topics.push(show);
+    console.log(topics);
 
     // calling renderButtons which handles the processing of our tv show ("topics") array
     renderButtons();
 
     // emptying out the text field after submission
-    // FIRST TRY $("#tv-show-input").empty();
+    // $("#tv-show-input").empty();
+
+    $('#tv-show-input').val("");
     
     // STILL NOT WORKING to clear the text field after new button created!!!
     $("#tv-show-input").blur(function() {
-        this.value = '';
+        this.val = '';
     });
 
     $("#tv-show-input").focus(function() {
-        this.value = '';
+        this.val = '';
     });
 });
 
@@ -198,47 +167,11 @@ $(document).on('click', '.tv-show', function(event){
 });
 
 
-/*
 
-
-  <img src="http://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-still="http://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-animate="http://media3.giphy.com/media/W6LbnBigDe4ZG/200.gif" data-state="still" class="gif">
-  
-  <script type="text/javascript">
-   
-    $(".gif").on("click", function() {
-      
-      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-      // var state = $(this).attr("data-state");
-      var state = $(this).data("state");
-      
-      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-      // Then, set the image's data-state to animate
-      // Else set src to the data-still value
-      
-      if (state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-      } else {
-        $(this).attr("src", $(this).attr("data-still"));
-        $(this).attr("data-state", "still");
-      }
-    });
-
-  </script>
-
-  */
 
      
 
 
-    
-
-
-    // When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
-
-    // Under every gif, display its rating (PG, G, so on).
-      
-        // Only once you get images displaying with button presses should you move on to the next step.
 
 
     
