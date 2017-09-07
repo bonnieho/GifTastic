@@ -10,6 +10,23 @@
 		<!-- save this for later <link rel="shortcut icon" type="image/xicon" href="" /> -->
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+
+		<!-- Google Fonts -->
+  		<link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky" rel="stylesheet" /> 
+  		<link href="https://fonts.googleapis.com/css?family=Cherry+Cream+Soda" rel="stylesheet" /> 
+  		<link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet" /> 
+  		<link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet" />
+  		<link href="https://fonts.googleapis.com/css?family=Galindo" rel="stylesheet" />
+  		<link href="https://fonts.googleapis.com/css?family=Rum+Raisin" rel="stylesheet" />
+  		<link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet" />
+  		<link href="https://fonts.googleapis.com/css?family=Goblin+One" rel="stylesheet" /> 
+
+
+
+
+
+
+
 		<!-- this tells IE to display in edge mode which is the highest standards mode supported by IE's rendering engine -->
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,32 +49,80 @@
       				margin: 10px;
     			}
   			</style>
+  			<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
 
 	</head>
 	<body>
+		<!-- <div id="container col-md-10 col-md-offset-2 col-sm-12 col-xs-12"> -->
 		<div id="main">
 
-		<!-- leaving space here for a nice banner/masthead -->
-			<h1>Classic Television!</h1>
+		<!-- first row with montage photos on top -->
+			<div class="row row-top">
+				<div class="col-sm-12 col-md-12">
+					<h1 class="fontdiner">Classic Television!</h1>
+				 </div>
+			</div>
 
-			<div id="buttons-view"></div>
+		<!-- instruction row  -->
+			<div class="row">
+				<div class="col-sm-12 col-md-12"> 
+					<p class="cherrycreamsoda">Below are a few popular television shows that many Americans grew up watching over the decades. When you select one of the buttons, ten of the most popular animated gifs that have been created based on that show will be displayed below. Click on the individual gifs to alternately turn the animation on and off!</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- <div id="buttons-view" class="col-sm-10 col-md-8 col-md-offset-1"></div> -->
+				<div id="buttons-view"></div>
+
+            </div>
 
 			<!-- create new buttons dynamically -->
-			 <form id="tv-form">
-      			<label for="tv-show-input">Add your favorite classic TV Show</label>
-      			<input type="text" id="tv-show-input"><br>
+			<div class="row">
+				<div class="col-sm-12 col-md-12"> 
+					<form id="tv-form" class="col-sm-10 col-md-8 col-md-offset-2">
+						<h2 class="cherrycreamsoda">Add your own favorite!</h2>
+						<p class="cherrycreamsoda lime">Need some ideas?! What about that funny show with the . . . and that other one . . . ?!? Check out this site for your old favorites: <br /><a href="http://www.classic-tv.com/">Classic TV Database</a></p>
+      					<label for="tv-show-input" class="galindo lime">Type in the name of your favorite classic TV Show:</label>
+      					<input type="text" id="tv-show-input">&#160;&#160;&#160;
 
-      			<!-- Button triggers new TV show name to be added -->
-     			 <input id="add-show" type="submit" value="Add a TV show">
-    		</form>
+      					<!-- Button triggers new TV show name to be added -->
+     					<input id="add-show" type="submit" value="Add your TV show" class="btn-info">
+    				</form>
+    			</div>
+			</div>
 
-			<hr />
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12"> 
+					<hr />
+				</div>
+			</div>
 
 
-			<!-- div for displaying the 10 gifs that get called up -->
-			<div id="my-ten-gifs"></div>
-			
-			
+			<div class="row">
+				<div class="col-sm-12 col-md-12"> 
+					<!-- div for displaying the 10 gifs that get called up -->
+					<div id="my-ten-gifs"></div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12"> 
+					<hr />
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- <div class="col-sm-12 col-md-12"> -->
+					<!-- <p class="col-sm-10 col-md-8 col-md-offset-2 ital footer"> -->
+					<p class="col-sm-12 col-md-12 ital footer">
+						&#064;2017 <a href="mailto:bonnieho@rice.edu">Bonnie L. Hoffman</a>&#160;&#160;(Created as a requiremant toward the completion of The University of Texas at Houston Coding Bootcamp)<br />
+						SYNOPSIS: In this assignment, the GIPHY API was called and returned results were modified using Javascript and jQuery to create a dynamic web page that populates with gifs of the user's choice, based on a theme of classic television shows. 
+					</p>
+				<!-- </div> -->
+			</div>
+
 
 		<!-- END main DIV -->
 		</div>

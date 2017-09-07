@@ -1,0 +1,282 @@
+/* These are the custom styles for a class project game created in Javascript and jQuery
+Author: Bonnie L. Hoffman - bonnieho@rice.edu */
+
+/* GIFTastic! */
+
+
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	/* color: #999; */
+	color: #ff0;
+	background-color: #000;
+	padding-top: 18px;
+	margin-bottom: 36px;
+}
+
+/* main div to hold the children together  */
+#main {
+	width: 65%;
+	margin: auto;
+	text-align: center;
+}
+
+
+/*  tv-show button styles */
+.btn-primary {
+    /* background: #09c; */
+    background: #005fd0;
+    color: #ff0;
+    border-radius:5px;
+}
+ 
+.btn-primary:hover, .btn-primary:focus {
+    /* background: #33a6cc; */
+    background: #3a89e8;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    /* background: #007299; */
+    color: #ff0;
+    background: #002789;
+    /* box-shadow: none; */
+}
+
+
+/*  add-show button styles */
+.btn-info {
+    /* background: #09c; */
+    background: #209800;
+    color: #ff0;
+    border-radius:5px;
+}
+ 
+.btn-info:hover, .btn-info:focus {
+    /* background: #33a6cc; */
+    background: #00df27;
+}
+ 
+.btn-info:active, .btn-info.active {
+    background: #099119;
+    color: #ff0;
+    /* box-shadow: none; */
+}
+
+
+/* +++++++++++++ Google Font styles ++++++++++++++++++  */
+
+.fontdiner {
+	font-family: 'Fontdiner Swanky', cursive;
+}
+
+.cherrycreamsoda {
+	font-family: 'Cherry Cream Soda', cursive;
+	font-size: 120%;
+}
+
+.slackey {
+	font-family: 'Slackey', cursive;
+	font-size: 120%;
+}
+
+
+.galindo{
+	font-family: 'Galindo', cursive;
+	font-size: 120%;
+}
+
+.spicyrice {
+	font-family: 'Spicy Rice', cursive;
+	font-size: 120%;
+}
+
+.rumraisin {
+	font-family: 'Rum Raisin', sans-serif;
+	font-size: 120%;
+}
+
+/* +++++++++++++ END Google Font styles ++++++++++++++++++  */
+
+
+h1 {
+	font-size: 300%;
+	display:inline;
+	vertical-align: bottom;
+}
+
+/* "add your own" instruction sectoin heading */
+h2.cherrycreamsoda {
+	font-size: 200%;
+	margin: 5px;
+	padding: 12px;
+	text-align: center;
+	color: lime;
+}
+
+/* this is the 'header' div. It's the only one with a background image (banner graphic) */
+.row-top {
+	background-image: url(../images/giphy_banner.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 160px;
+	line-height: 160px;
+}
+
+/* container that holds shows' buttons */
+#buttons-view {
+	text-align: center;
+}
+
+/*  this sets the form field input to a dark gray, overwriting the default yellow set for the page */
+#tv-show-input {
+	color:#666;
+}
+
+/* div that holds Giphy gifs that are returned */
+#my-ten-gifs {
+	text-align: left;
+	display: inline;
+}
+
+/* container that holds both the ratings and the gif that it's associated with */
+.outer-container {
+	width: 300px;
+    margin-bottom: 20px;
+	display: inline-block;
+}
+
+
+/* ratings text on line that appears in #my-ten-gifs only once a button is clicked */
+#my-ten-gifs p {
+	border: solid #666 1px;
+	padding: 10px;
+	font-size: 80%;
+	text-align: center;
+	color: #999;
+}
+
+/* colors for ratings text in #my-ten-gifs (only once a button is clicked) */
+.lightgreen {
+	color: #90ee90;
+}
+
+.lime {
+	color: lime;
+}
+
+.magenta {
+	color: magenta;
+}
+
+.orange {
+	color: orange;
+} 
+
+.purple {
+	color: purple;
+}
+
+.red {
+	color: red;
+}
+
+/* END text color styles */
+
+
+.ital {
+	font-style: italic;
+}
+
+.instructions {
+	width: 50%;
+	font-size: 80%;
+	font-style: italic;
+	margin: auto;
+	padding:16px 24px;
+	border: solid 1px #999;
+}
+
+.instructions p {
+	margin: 8px 0;
+}
+
+.footer {
+	font-size: 80%;
+}
+
+/* footer link color change */
+.footer a:link {
+	color: lime;
+}
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+		.row-top {
+			min-height: 54px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+		.row-top {
+			min-height: 86px;
+		}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+		.row-top {
+			min-height: 128px;
+		}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+		/* already ok at this size */
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+		/* already this size */
+    }
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+		/* already ok at this size */
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+		/* already this size */
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+		.row-top {
+			min-height: 128px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+		.row-top {
+			min-height: 86px;
+		}
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+		.row-top {
+			min-height: 54px;
+		}
+    }
+
