@@ -35,14 +35,14 @@ The call is ultimately sent on a button click as such:
 
 5. Since the object returned by the Giphy API also contains a parameter for rating for each gif (such as PG, G, so on), these ratings are also displayed in a discrete, dynamic placeholder div directly above each returned image. As an added feature, those ratings have been color-coded through formatting using a loop and if else statements:
 
-```...
-	else if(response.data[i].rating==="pg"){
-        ratingColor = 'magenta';
-	}
-	else if(response.data[i].rating==="pg-13"){
-        ratingColor = 'orange';
-	}
-...```
+    ...
+		else if(response.data[i].rating==="pg"){
+        	ratingColor = 'magenta';
+		}
+		else if(response.data[i].rating==="pg-13"){
+       	 ratingColor = 'orange';
+		}
+    ...
 
 ![GifTastic_ratings](assets/images/_02_GifTastic_ratings.png)
 
@@ -50,12 +50,12 @@ The call is ultimately sent on a button click as such:
 
 _(partial code example)_
 
-```...
-if (state === "still") {
-		$(this).attr("src", $(this).attr("data-animate"));
-		$(this).attr("data-state", "animate");
-	                        } else {
-...```
+    ...
+		if (state === "still") {
+			$(this).attr("src", $(this).attr("data-animate"));
+			$(this).attr("data-state", "animate");
+	    } else {
+    ...
 
 7. Finally, a form was created within the page to allow the user to add buttons based on classic tv shows of their interest. This form takes a value from a user input text field and pushes it into the current topics array. Following the execution of that action, another function call regenerates all of the buttons on the page based on the newly updated set of tv show names (elements) in the array.
 
