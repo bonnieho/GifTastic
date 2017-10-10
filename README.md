@@ -35,7 +35,6 @@ The call is ultimately sent on a button click as such:
 
 5. Since the object returned by the Giphy API also contains a parameter for rating for each gif (such as PG, G, so on), these ratings are also displayed in a discrete, dynamic placeholder div directly above each returned image. As an added feature, those ratings have been color-coded through formatting using a loop and if else statements:
 
-
     ...
     	if (state === "still") {
 			$(this).attr("src", $(this).attr("data-animate"));
