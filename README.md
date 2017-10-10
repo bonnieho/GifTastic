@@ -35,14 +35,16 @@ The call is ultimately sent on a button click as such:
 
 5. Since the object returned by the Giphy API also contains a parameter for rating for each gif (such as PG, G, so on), these ratings are also displayed in a discrete, dynamic placeholder div directly above each returned image. As an added feature, those ratings have been color-coded through formatting using a loop and if else statements:
 
-```...
+```
+...
     	else if(response.data[i].rating==="pg"){
     		ratingColor = 'magenta';
     	}
     	else if(response.data[i].rating==="pg-13"){
     		ratingColor = 'orange';
     	}
-...```
+...
+```
 
 
 ![GifTastic_ratings](assets/images/_02_GifTastic_ratings.png)
