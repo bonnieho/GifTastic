@@ -9,6 +9,11 @@ In this assignment, the [GIPHY API](https://developers.giphy.com/docs/) was call
 
 Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layout and responsive functionality was achieved through the combined implementation of html5, css3, and Bootstrap3.
 
+![GifTastic_main](assets/images/_01_GifTastic_main.png)
+
+- - - 
+
+
 ### How it works
 1. The first step was to create an array of strings (based on title) to populate the initial buttons used to call specific classic television shows.
 
@@ -18,37 +23,39 @@ Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layo
 
 4. The GET request to the Giphy API used to obtain these gifs uses parameters for the initial query and a desired amount to return (limit) and was rendered as a variable as such:
 
-	`queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" + "&api_key=dc6zaTOxFJmzC";`
+`queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" + "&api_key=dc6zaTOxFJmzC";`
 
-	_(A public API key public API key for developers' use is provided by Giphy and sent with the query request.)_
+_(A public API key public API key for developers' use is provided by Giphy and sent with the query request.)_
 
-	The call is ultimately sent on a button click as such:
+The call is ultimately sent on a button click as such:
 
-		`...
-		$.ajax({url: queryURL, method: 'GET'})
-		...`
+`...
+	$.ajax({url: queryURL, method: 'GET'})
+...`
 
 5. Since the object returned by the Giphy API also contains a parameter for rating for each gif (such as PG, G, so on), these ratings are also displayed in a discrete, dynamic placeholder div directly above each returned image. As an added feature, those ratings have been color-coded through formatting using a loop and if else statements:
 
-	`...`
-	`else if(response.data[i].rating==="pg"){
+`...
+	else if(response.data[i].rating==="pg"){
         ratingColor = 'magenta';
 	}
 	else if(response.data[i].rating==="pg-13"){
         ratingColor = 'orange';
-	}`
-	`...`
+	}
+...`
+
+![GifTastic_ratings](assets/images/_02_GifTastic_ratings.png)
 
 6. The initial set of gifs returned are the *still* versions of those images, and since we want the gif to animate once the user clicks on them, a function to swap the static version to instead render one of the animated versions of each gif must be called. Likewise, once the user clicks the gif again, it should stop playing; in other words, return to the static state once more.
 
 _(partial code example)_
 
-	`...`
-	`if (state === "still") {
+`...
+if (state === "still") {
 		$(this).attr("src", $(this).attr("data-animate"));
 		$(this).attr("data-state", "animate");
 	                        } else {
-	...`
+...`
 
 7. Finally, a form was created within the page to allow the user to add buttons based on classic tv shows of their interest. This form takes a value from a user input text field and pushes it into the current topics array. Following the execution of that action, another function call regenerates all of the buttons on the page based on the newly updated set of tv show names (elements) in the array.
 
