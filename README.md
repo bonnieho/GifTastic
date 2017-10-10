@@ -1,7 +1,7 @@
-#GifTastic *(with a "Classic" Television theme)*
+# GifTastic *(with a "Classic" Television theme)*
 Published site: [https://bonnieho.github.io/GifTastic/](https://bonnieho.github.io/GifTastic/)
 
-##Overview
+## Overview
 
 This is an exercise in successfully using an API key to GET data from an external site and then - using specific attributes of the objects returned - render (as with the rating) or manipulate (as with the animate or static data state) those resulting objects (animated gifs) within the document.
 
@@ -9,7 +9,7 @@ In this assignment, the [GIPHY API](https://developers.giphy.com/docs/) was call
 
 Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layout and responsive functionality was achieved through the combined implementation of html5, css3, and Bootstrap3.
 
-###How it works
+### How it works
 1. The first step was to create an array of strings (based on title) to populate the initial buttons used to call specific classic television shows.
 
 2. A button element for each array member is created using jQuery syntax with titles applied as a class. Through the use of a loop, those buttons are appended to a specifically styled display div on the result page.
@@ -18,11 +18,11 @@ Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layo
 
 4. The GET request to the Giphy API used to obtain these gifs uses parameters for the initial query and a desired amount to return (limit) and was rendered as a variable as such:
 
-	* `queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" + "&api_key=dc6zaTOxFJmzC";`
+	`queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" + "&api_key=dc6zaTOxFJmzC";`
 
-	_(A public API key public API key for developers' use is provided by Giphy and sent with the query request.)_
+_(A public API key public API key for developers' use is provided by Giphy and sent with the query request.)_
 
-	The call is ultimately sent on a button click as such:
+The call is ultimately sent on a button click as such:
 
 		`...
 		$.ajax({url: queryURL, method: 'GET'})
@@ -32,14 +32,14 @@ Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layo
 
 	`...
 	else if(response.data[i].rating==="pg"){
-		ratingColor = 'magenta';
+        ratingColor = 'magenta';
 	}
 	else if(response.data[i].rating==="pg-13"){
-	    ratingColor = 'orange';
+        ratingColor = 'orange';
 	}
 	...`
 
-6. The initial set of gifs returned are the ÔstillÕ versions of those images, and since we want the gif to animate once the user clicks on them, a function to swap the static version to instead render one of the animated versions of each gif must be called. Likewise, once the user clicks the gif again, it should stop playing; in other words, return to the static state once more.
+6. The initial set of gifs returned are the *still* versions of those images, and since we want the gif to animate once the user clicks on them, a function to swap the static version to instead render one of the animated versions of each gif must be called. Likewise, once the user clicks the gif again, it should stop playing; in other words, return to the static state once more.
 
 _(partial code example)_
 
@@ -52,7 +52,7 @@ _(partial code example)_
 
 7. Finally, a form was created within the page to allow the user to add buttons based on classic tv shows of their interest. This form takes a value from a user input text field and pushes it into the current topics array. Following the execution of that action, another function call regenerates all of the buttons on the page based on the newly updated set of tv show names (elements) in the array.
 
-###Challenges!
+### Challenges!
 
 Specific functionality that was not critical to the overall function of the page but still kept this programmer up at night were ultimately resolved through sheer stubbornness and lots of research and inquiry. Although most of those irritations were cosmetic, some were simply proactive concerns in anticipation of specific situations and/or hosting environments. For example:
 
@@ -87,4 +87,5 @@ Likewise, we also want to empty out the div that holds the tens gifs (the static
 
 
 (c)2017 __Bonnie Lynne Hoffman__ 
+
 *toward the completion of The University of Texas at Austin Houston Coding Boot Camp Certificate - (June 2017 cohort)*
