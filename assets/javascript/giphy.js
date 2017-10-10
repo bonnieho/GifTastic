@@ -5,11 +5,6 @@
 // This is an exercise in successfully using an API key to GET data from an external site and then - using specific attributes of the objects returned - render (as with the rating) or manipulate (as with the animate or static data state) those resulting objects (animated gifs).
 
 
-// NOTES
-
-    // HOW TO USE
-
-
 
 
 // all contained within document ready function to allow all scripts to run ONLY after the document is loaded completely
@@ -39,7 +34,7 @@ $(document).ready(function(){
     // The form (#tv-form) takes the value from a user input box (#tv-show-input) and adds it into the topics array. 
     // Then make a function call that takes each topic in the array remakes the buttons on the page.
 
-    // Taking the topics in this array and create buttons in your HTML.
+    // Taking the topics in this array and creating buttons in the HTML.
         
     // Function for displaying tv show data
     function renderButtons() {
@@ -66,7 +61,7 @@ $(document).ready(function(){
     }
 
 
-    // start out with a empty text field
+    // start out with an empty text field
     $('#tv-show-input').val("");
 
 
@@ -112,7 +107,7 @@ $(document).ready(function(){
 
     $(document).on('click', '.tv-show', function(event){
          $('#my-ten-gifs').empty();
-         // put a line here with the ratings legend??
+         // put a line here with the ratings legend
          $('#my-ten-gifs').append('<p><span class="lightgreen">Y - illustrated, cartoons</span>&#160;&#160;&#160;|&#160;&#160;&#160;<span class="lime">G - general audience</span>&#160;&#160;&#160;|&#160;&#160;&#160;<span class="magenta">PG - parental guidance suggested</span> &#160;&#160;&#160;|&#160;&#160;&#160;<span class="orange">PG-13 - parents strongly cautioned</span> &#160;&#160;&#160;|&#160;&#160;&#160;<span class="purple">R - restricted</span> &#160;&#160;&#160;|&#160;&#160;&#160;<span class="red">NC-17 - 18 and older only</span></p>');
          searchShows= $(this).attr('data-name');
          queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" +"&api_key=dc6zaTOxFJmzC";
@@ -126,35 +121,6 @@ $(document).ready(function(){
                     for (var i = 0; i < response.data.length; i++) {
                         // console.log(response.data[i]);
 
-                        /*
-
-                        // Creating a div with the class "show"
-                        var gifDiv = $("<div class='show'>");
-                  
-                        // Storing the result item's rating
-                        var rating = response.rating;
-
-                        // Creating a paragraph tag with the result item's rating
-                        var p = $("<p>").text("Rating: " + rating);
-
-                        // Displaying the rating
-                        showDiv.append(p);
-
-                        // Creating an image tag
-                        var showImage = $("<img>");
-
-                        // Giving the image tag an src attribute of a proprty pulled off the result item
-                        showImage.attr("src", topics[i].images.fixed_height.url);
-                  
-                        gifDiv.append(showImage);
-                  
-                        // Appending the paragraph and showImage we created to the "gifDiv" div we created
-                        gifDiv.append(p);
-
-                        // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
-                        $("#my-ten-gifs").prepend(gifDiv);
-
-                        */
                         var formattedRating = response.data[i].rating.toUpperCase();
                         
                         $('#my-ten-gifs').append("<div class='outer-container'><span class='title'>Rating: "+ formattedRating +"</span><div class='image-container'><img class='images-returned img-responsive center-block'" + "data-still='" + response.data[i].images.downsized_still.url + "'" + "data-animate='" + response.data[i].images.downsized.url + "'" + "data-state='still'" + "src='" + response.data[i].images.downsized_still.url + "'></div></div>");

@@ -5,7 +5,7 @@ Published site: [https://bonnieho.github.io/GifTastic/](https://bonnieho.github.
 
 This is an exercise in successfully using an API key to GET data from an external site and then - using specific attributes of the objects returned - render (as with the rating) or manipulate (as with the animate or static data state) those resulting objects (animated gifs) within the document.
 
-In this assignment, the [GIPHY API](https://developers.giphy.com/docs/) was called and returned results were modified using Javascript and jQuery to create a dynamic web page that populates with gifs of the user's choice, based on a theme of classic television shows. Additionally, a user may toggle between animated and static versions of the same image as well as create buttons for their own favorite television shows so that they can call popular animated gifs associated with those choices.
+In this assignment, the [GIPHY API] (https://developers.giphy.com/docs/) was called and returned results were modified using Javascript and jQuery to create a dynamic web page that populates with gifs of the user's choice, based on a theme of classic television shows. Additionally, a user may toggle between animated and static versions of the same image as well as create buttons for their own favorite television shows so that they can call popular animated gifs associated with those choices.
 
 Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layout and responsive functionality was achieved through the combined implementation of html5, css3, and Bootstrap3.
 
@@ -18,7 +18,7 @@ Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layo
 
 4. The GET request to the Giphy API used to obtain these gifs uses parameters for the initial query and a desired amount to return (limit) and was rendered as a variable as such:
 
-	* `queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" + "&api_key=dc6zaTOxFJmzC";`
+	* `queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" +"&api_key=dc6zaTOxFJmzC";`
 
 	_(A public API key public API key for developers' use is provided by Giphy and sent with the query request.)_
 
@@ -39,7 +39,7 @@ Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layo
 	}
 	...`
 
-6. The initial set of gifs returned are the √îstill√ï versions of those images, and since we want the gif to animate once the user clicks on them, a function to swap the static version to instead render one of the animated versions of each gif must be called. Likewise, once the user clicks the gif again, it should stop playing; in other words, return to the static state once more.
+6. The initial set of gifs returned are the ‘still’ versions of those images, and since we want the gif to animate once the user clicks on them, a function to swap the static version to instead render one of the animated versions of each gif must be called. Likewise, once the user clicks the gif again, it should stop playing; in other words, return to the static state once more.
 
 _(partial code example)_
 
