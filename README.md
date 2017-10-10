@@ -44,6 +44,13 @@ The call is ultimately sent on a button click as such:
     	}
     ...
 
+    ...
+    	if (state === "still") {
+			$(this).attr("src", $(this).attr("data-animate"));
+			$(this).attr("data-state", "animate");
+    	} else {
+    ...
+
 ![GifTastic_ratings](assets/images/_02_GifTastic_ratings.png)
 
 6. The initial set of gifs returned are the *still* versions of those images, and since we want the gif to animate once the user clicks on them, a function to swap the static version to instead render one of the animated versions of each gif must be called. Likewise, once the user clicks the gif again, it should stop playing; in other words, return to the static state once more.
