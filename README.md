@@ -74,9 +74,9 @@ Cosmetically, we would like the form to start out with an empty text field inste
 
 Also, when rending a new set of buttons based on the updated show array, it's nice to clear out the previously added buttons so as to avoid any possible duplicates:
 
-	_(within the `renderButtons()` function)_
+*(within the `renderButtons()` function)*
 
-	`$("#buttons-view").empty();`
+`$("#buttons-view").empty();`
 
 Likewise, we also want to empty out the div that holds the ten gifs (the static versions) previously called up once another show button is clicked:
 
