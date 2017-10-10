@@ -56,21 +56,21 @@ _(partial code example)_
 
 Specific functionality that was not critical to the overall function of the page but still kept this programmer up at night were ultimately resolved through sheer stubbornness and lots of research and inquiry. Although most of those irritations were cosmetic, some were simply proactive concerns in anticipation of specific situations and/or hosting environments. For example:
 
-	* In order to avert any synchronization issues, all scripting is contained within a document ready function to allow scripts to run ONLY after the document is loaded completely:
+* In order to avert any synchronization issues, all scripting is contained within a document ready function to allow scripts to run ONLY after the document is loaded completely:
 
-		_(partial code example)_
+_(partial code example)_
 
-		`$(document).ready(function(){ ...`
+`$(document).ready(function(){ ...`
 
-	* Since we're using a form, we want to prevent that form from trying to submit itself with:
+* Since we're using a form, we want to prevent that form from trying to submit itself with:
 
-		`event.preventDefault();`
+`event.preventDefault();`
 
-	* The protocol in the query URL was amended from http to https so that the app will work properly if ever deployed to Heroku or a similar hosting environment.
+* The protocol in the query URL was amended from http to https so that the app will work properly if ever deployed to Heroku or a similar hosting environment.
 
 Cosmetically, we would like the form to start out with an empty text field instead of what was previously entered:
 
-	`$('#tv-show-input').val("");`
+`$('#tv-show-input').val("");`
 
 Also, when rending a new set of buttons based on the updated show array, it's nice to clear out the previously added buttons so as to avoid any possible duplicates:
 
@@ -80,7 +80,7 @@ Also, when rending a new set of buttons based on the updated show array, it's ni
 
 Likewise, we also want to empty out the div that holds the ten gifs (the static versions) previously called up once another show button is clicked:
 
-	`$('#my-ten-gifs').empty();`
+`$('#my-ten-gifs').empty();`
 
 
 - - - 
