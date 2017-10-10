@@ -62,6 +62,8 @@ _(partial code example)_
 
 7. Finally, a form was created within the page to allow the user to add buttons based on classic tv shows of their interest. This form takes a value from a user input text field and pushes it into the current topics array. Following the execution of that action, another function call regenerates all of the buttons on the page based on the newly updated set of tv show names (elements) in the array.
 
+- - -
+
 ### Challenges!
 
 Specific functionality that was not critical to the overall function of the page but still kept this programmer up at night were ultimately resolved through sheer stubbornness and lots of research and inquiry. Although most of those irritations were cosmetic, some were simply proactive concerns in anticipation of specific situations and/or hosting environments. For example:
