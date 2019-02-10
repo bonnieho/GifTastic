@@ -25,7 +25,7 @@ Theme-inspired, artistic fonts are drawn from the Google Fonts library, and layo
 
 `queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchShows + "&limit=10" + "&api_key=dc6zaTOxFJmzC";`
 
-_(A public API key public API key for developers' use is provided by Giphy and sent with the query request.)_
+_(A public API key for developers' use is provided by Giphy and sent with the query request.)_
 
 The call is ultimately sent on a button click as such:
 
